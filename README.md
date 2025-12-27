@@ -1,10 +1,10 @@
-# gcloud-expert
+# mastering-gcloud-commands
 
-A comprehensive Claude Code skill for expert-level Google Cloud CLI (gcloud) management.
+Expert-level Google Cloud CLI (gcloud) skill for managing GCP resources.
 
 ## Overview
 
-This skill transforms Claude into a GCP infrastructure expert, providing:
+This skill provides comprehensive gcloud CLI patterns for:
 
 - **Cross-platform installation** guides for macOS, Windows, and Linux
 - **Multi-account management** with named configurations
@@ -13,20 +13,22 @@ This skill transforms Claude into a GCP infrastructure expert, providing:
 - **Deployment workflows** for Cloud Run, Firebase, and containerized applications
 - **CI/CD integration** with GitHub Actions and Cloud Build
 - **Database management** for AlloyDB and Cloud SQL
-- **Automation scripts** for common operations
+- **VPC networking** including subnets, firewall rules, and VPC connectors
+- **Secret management** with Secret Manager integration
+- **Automation scripts** with error handling and idempotent patterns
 
 ## Installation
 
 ### For Claude Code Users
 
-Copy the `gcloud` folder to your Claude Code skills directory:
+Copy the `mastering-gcloud-commands` folder to your Claude Code skills directory:
 
 ```bash
 # macOS/Linux
-cp -r gcloud ~/.claude/skills/
+cp -r mastering-gcloud-commands ~/.claude/skills/
 
 # Or clone directly
-git clone https://github.com/SpillwaveSolutions/gcloud_skill.git ~/.claude/skills/gcloud
+git clone https://github.com/SpillwaveSolutions/gcloud_skill.git ~/.claude/skills/mastering-gcloud-commands
 ```
 
 ### Verify Installation
@@ -36,8 +38,8 @@ The skill activates automatically when you mention gcloud, GCP, Cloud Run, or re
 ## Skill Structure
 
 ```
-gcloud/
-├── SKILL.md                    # Main skill file with workflows
+mastering-gcloud-commands/
+├── SKILL.md                    # Main skill file with decision trees and workflows
 ├── references/                 # Detailed documentation (loaded on-demand)
 │   ├── installation-macos.md   # macOS: Homebrew, Apple Silicon
 │   ├── installation-windows.md # Windows: installer, PowerShell, silent
@@ -53,7 +55,11 @@ gcloud/
 │   ├── firebase-management.md  # Firebase CLI integration
 │   ├── cicd-integration.md     # GitHub Actions, Cloud Build
 │   ├── api-enablement.md       # Required APIs by category
-│   └── verification-patterns.md
+│   ├── verification-patterns.md
+│   ├── vpc-networking.md       # VPCs, subnets, firewall, connectors
+│   ├── secret-manager.md       # Secrets, versions, IAM bindings
+│   ├── troubleshooting.md      # Debug mode, common errors
+│   └── scripting-patterns.md   # Error handling, batch ops, jq parsing
 └── scripts/                    # Ready-to-use automation scripts
     ├── deploy-cloud-run.sh     # Deployment with common options
     ├── setup-wif-github.sh     # Workload Identity Federation setup
