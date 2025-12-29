@@ -1,4 +1,4 @@
-# mastering-gcloud-commands
+# Mastering Google Cloud CLI
 
 Expert-level Google Cloud CLI (gcloud) skill for managing GCP resources.
 
@@ -17,21 +17,119 @@ This skill provides comprehensive gcloud CLI patterns for:
 - **Secret management** with Secret Manager integration
 - **Automation scripts** with error handling and idempotent patterns
 
-## Installation
+## Installing with Skilz (Universal Installer)
 
-### For Claude Code Users
+The recommended way to install this skill across different AI coding agents is using the **skilz** universal installer.
 
-Copy the `mastering-gcloud-commands` folder to your Claude Code skills directory:
+### Install Skilz
 
 ```bash
-# macOS/Linux
-cp -r mastering-gcloud-commands ~/.claude/skills/
-
-# Or clone directly
-git clone https://github.com/SpillwaveSolutions/gcloud_skill.git ~/.claude/skills/mastering-gcloud-commands
+pip install skilz
 ```
 
-### Verify Installation
+This skill supports [Agent Skill Standard](https://agentskills.io/) which means it supports 14 plus coding agents including Claude Code, OpenAI Codex, Cursor and Gemini.
+
+### Git URL Options
+
+You can use either `-g` or `--git` with HTTPS or SSH URLs:
+
+```bash
+# HTTPS URL
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands
+
+# SSH URL
+skilz install --git git@github.com:SpillwaveSolutions/mastering-gcloud-commands.git
+```
+
+### Claude Code
+
+Install to user home (available in all projects):
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands
+```
+
+Install to current project only:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --project
+```
+
+### OpenCode
+
+Install for [OpenCode](https://opencode.ai):
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --agent opencode
+```
+
+Project-level install:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --project --agent opencode
+```
+
+### Gemini
+
+Project-level install for Gemini:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --agent gemini
+```
+
+### OpenAI Codex
+
+Install for OpenAI Codex:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --agent codex
+```
+
+Project-level install:
+```bash
+skilz install -g https://github.com/SpillwaveSolutions/mastering-gcloud-commands --project --agent codex
+```
+
+### Install from Skillzwave Marketplace
+
+```bash
+# Claude to user home dir ~/.claude/skills
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands
+
+# Claude skill in project folder ./claude/skills
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --project
+
+# OpenCode install to user home dir ~/.config/opencode/skills
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --agent opencode
+
+# OpenCode project level
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --agent opencode --project
+
+# OpenAI Codex install to user home dir ~/.codex/skills
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --agent codex
+
+# OpenAI Codex project level ./.codex/skills
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --agent codex --project
+
+# Gemini CLI (project level) -- only works with project level
+skilz install SpillwaveSolutions_mastering-gcloud-commands/mastering-gcloud-commands --agent gemini
+```
+
+See this site [skill Listing](https://skillzwave.ai/skill/SpillwaveSolutions__mastering-gcloud-commands__mastering-gcloud-commands__SKILL/) to see how to install this exact skill to 14+ different coding agents.
+
+### Other Supported Agents
+
+Skilz supports 14+ coding agents including Windsurf, Qwen Code, Aidr, and more.
+
+For the full list of supported platforms, visit [SkillzWave.ai/platforms](https://skillzwave.ai/platforms/) or see the [skilz-cli GitHub repository](https://github.com/SpillwaveSolutions/skilz-cli)
+
+## Manual Installation
+
+Copy this skill to your Claude Code skills directory:
+
+```bash
+# User-level installation
+cp -r mastering-gcloud-commands ~/.claude/skills/
+
+# Or create a symlink
+ln -s "$(pwd)" ~/.claude/skills/mastering-gcloud-commands
+```
+
+## Verify Installation
 
 The skill activates automatically when you mention gcloud, GCP, Cloud Run, or related terms.
 
@@ -208,23 +306,25 @@ This skill uses a three-level loading system for efficient context usage:
 
 When you ask about a specific topic, Claude loads only the relevant reference file.
 
+## Version
+
+- **Version:** 1.0.0
+- **Author:** Richard Hightower / Spillwave Solutions
+- **License:** MIT
+
 ## Contributing
 
-Contributions welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Add or improve documentation/scripts
+1. Fork this repository
+2. Add or update reference files in `references/`
+3. Update `SKILL.md` navigation if adding new files
 4. Submit a pull request
 
-## License
+## Related Skills
 
-MIT License - See LICENSE file for details.
-
-## Author
-
-Created by Richard Hightower / Spillwave Solutions
+- `mastering-aws-cli` - AWS CLI reference
+- `mastering-github-cli` - GitHub CLI reference
 
 ---
 
-*This skill was created using the [skill-creator](https://github.com/anthropics/claude-code) pattern for Claude Code.*
+<a href="https://skillzwave.ai/">Largest Agentic Marketplace for AI Agent Skills</a> and
+<a href="https://spillwave.com/">SpillWave: Leaders in AI Agent Development.</a>
