@@ -3,6 +3,20 @@
 This guide covers all authentication methods for gcloud CLI, from interactive browser login
 to service accounts and Workload Identity Federation.
 
+## Contents
+
+- [Authentication Methods Overview](#authentication-methods-overview)
+- [User Authentication (OAuth 2.0)](#user-authentication-oauth-20)
+- [Service Account Authentication](#service-account-authentication)
+- [Service Account Impersonation](#service-account-impersonation-recommended)
+- [Workload Identity Federation](#workload-identity-federation-wif)
+- [Environment Variables](#environment-variables)
+- [Credential Storage](#credential-storage)
+- [Idempotent Service Account Creation](#idempotent-service-account-creation)
+- [ADC File Locations and Cleanup](#adc-file-locations-and-cleanup)
+- [Security Best Practices](#security-best-practices)
+- [Troubleshooting](#troubleshooting)
+
 ## Authentication Methods Overview
 
 | Method | Use Case | Security Level |
@@ -53,10 +67,10 @@ gcloud auth application-default login
 gcloud auth application-default print-access-token
 ```
 
-**Important**: ADC is separate from gcloud's own auth. Use it when:
-- Running Python/Go/Java code locally that uses Google Cloud client libraries
-- Testing Terraform with Google provider
-- Running local development servers
+**Important**: ADC is separate from gcloud's own auth. Applicable scenarios:
+- Local Python/Go/Java code using Google Cloud client libraries
+- Terraform with Google provider
+- Local development servers
 
 ### Managing Multiple User Accounts
 
